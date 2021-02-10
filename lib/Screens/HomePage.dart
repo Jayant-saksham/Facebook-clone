@@ -45,7 +45,16 @@ class _HomePageState extends State<HomePage> {
             child: CreatePostContainer(
               currentUser: currentUser,
             ),
-          )
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+            sliver: SliverToBoxAdapter(
+              child: Stories(
+                currentUser: currentUser,
+                stories: stories,
+              ),
+            ),
+          ),
         ],
       ),
     );
